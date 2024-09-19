@@ -1,6 +1,6 @@
------------------------------------------------
+#-----------------------------------------------
 #Librerias para el funcionamiento del software
------------------------------------------------
+#-----------------------------------------------
 
 from cProfile import label
 import math
@@ -12,32 +12,32 @@ from tkinter import messagebox as MessageBox
 from PIL import ImageTk, Image
 from matplotlib import image
 
----------------------------
+#---------------------------
 #Descripción sobre mí
----------------------------
+#---------------------------
 
 print(os.getcwd())
 def popup():
     MessageBox.showinfo("Sobre mí","Soy un desarrollador de software. Si quieres ver más proyectos visita mi Github:\n\nMike538")
     
------------------------
+#-----------------------
 #Propiedades de imagen
------------------------
+#-----------------------
 
 root = Tk()
 root.config(bd=15)
 root.title("I love you <3")
 image = Image.open("astronauta.png")
-image = image.resize((200,200), Image.ANTIALIAS)
+image = image.resize((200,200))
 
 
 img = ImageTk.PhotoImage(image)
 foto = Label(root, image=img, bd=0 )
 foto.grid(row=0, column=0)
 
-------------------------------
+#------------------------------
 #Propiedades de barra de menú
-------------------------------
+#------------------------------
 
 menubar = Menu(root)
 root.config(menu=menubar)
@@ -52,15 +52,15 @@ menubar.add_command(label="Salir", command=root.destroy)
 instrucciones = Label(root, text="El tiempo es relativo:\n\nun minuto lejos de quien amas te parece una eternidad;\nun minuto junto a la mujer que amas, un segundo.")
 instrucciones.grid(row=0, column=1)
 
----------------------
+#---------------------
 #Titulo del programa
----------------------
+#---------------------
 
 title("I love You <3")
 
--------------------------------------
+#-------------------------------------
 #Realiamos la estrcutura del corazón
--------------------------------------
+#-------------------------------------
 
 def xt(t):
     return 16*math.sin(t)**3
